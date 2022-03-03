@@ -11,7 +11,9 @@ Vue.prototype.$showMessage = showMessage;
 // 注册全局指令
 import vLoading from "./directives/loading";
 import vLazy from "./directives/lazy";
+// 使用方式 v-loading
 Vue.directive("loading", vLoading);
+// 使用方式 v-lazy
 Vue.directive("lazy", vLazy);
 
 new Vue({

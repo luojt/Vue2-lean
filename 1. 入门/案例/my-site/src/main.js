@@ -17,7 +17,7 @@ Vue.directive("loading", vLoading);
 Vue.directive("lazy", vLazy);
 
 new Vue({
-  router,
-  store,
-  render: (h) => h(App),
+	router,
+	store,
+	render: (h) => h(App),
 }).$mount("#app");

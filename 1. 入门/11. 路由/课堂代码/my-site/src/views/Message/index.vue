@@ -1,9 +1,9 @@
 <template>
-  <h1>留言板</h1>
+	<h1>留言板</h1>
 </template>
 
 <script>
-export default {};
+	export default {};
 </script>
 
 <style></style>

@@ -18,3 +18,14 @@ a {
     color: @primary;
   }
 }
+
+// 选择用户选择的元素部分。
+::selection {
+	  color: red;
+	  background: yellow;
+	}
+	
+::-moz-selection { /* 针对 Firefox 的代码 */
+	  color: red;
+	  background: yellow;
+	}

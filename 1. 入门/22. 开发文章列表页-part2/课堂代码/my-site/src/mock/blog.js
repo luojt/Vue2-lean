@@ -1,5 +1,7 @@
 import Mock from "mockjs";
 import qs from "querystring";
+
+//获取文章分类
 Mock.mock("/api/blogtype", "get", {
   code: 0,
   msg: "",
@@ -12,7 +14,7 @@ Mock.mock("/api/blogtype", "get", {
     },
   ],
 });
-
+//分页获取博客
 Mock.mock(/^\/api\/blog(\?.+)?$/, "get", function(options) {
   const query = qs.parse(options.url);
 
@@ -24,8 +26,8 @@ Mock.mock(/^\/api\/blog(\?.+)?$/, "get", function(options) {
       [`rows|${query.limit || 10}`]: [
         {
           id: "@guid",
-          title: "@ctitle(1, 50)",
-          description: "@cparagraph(1, 10)",
+          title: "这是随机生成的标题：@ctitle(1, 50)",
+          description: "这是随机生成的博客内容：@cparagraph(1, 10)",
           category: {
             "id|1-10": 0,
             name: "分类@id",

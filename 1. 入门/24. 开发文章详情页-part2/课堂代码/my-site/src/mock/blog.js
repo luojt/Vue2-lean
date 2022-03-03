@@ -1,5 +1,6 @@
 import Mock from "mockjs";
 import qs from "querystring";
+//博客分类
 Mock.mock("/api/blogtype", "get", {
   code: 0,
   msg: "",
@@ -12,7 +13,7 @@ Mock.mock("/api/blogtype", "get", {
     },
   ],
 });
-
+//博客列表内容
 Mock.mock(/^\/api\/blog(\?.+)?$/, "get", function(options) {
   const query = qs.parse(options.url);
 
@@ -42,7 +43,7 @@ Mock.mock(/^\/api\/blog(\?.+)?$/, "get", function(options) {
     },
   });
 });
-
+//博客详情
 Mock.mock(/^\/api\/blog\/[^/]+$/, "get", {
   code: 0,
   msg: "",
